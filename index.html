@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/style.css">
   
   <title>Frontend Mentor | Notifications page</title>
 
@@ -16,57 +17,80 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <h3>Notifications <span>3</span></h3>
+    <header class="header">
+      <h3 class="notifictaion-title">Notifications <span class="notification-badge">3</span></h3>
       <span class="mark-read">Mark all as read</span>
     </header>
-    <main>
-      <div>
-        <img src="assets/images/avatar-mark-webber.webp" alt="mark weber's avatar">
-        <p>
-          <strong class="user-name">Mark Webber</strong>reacted to your recent post 
-          <span>My first tournament today!</span>
-          <span class="notification-time">1m ago</span>
-        </p>
-      </div>
-      <div>
-        <img src="assets/images/avatar-angela-gray.webp" alt="angela gray's avatar">
-        <p>
-          <strong class="user-name">Angela Gray</strong> followed you
-          <span class="notification-time">5m ago</span>
+    <main class="main">
+      <div class="notification-item unread">
+        <img src="assets/images/avatar-mark-webber.webp" alt="mark weber's avatar" class="avatar">
+        <div class="notification-details">
+          <p class="notification-preview">
+            <strong class="user-name">Mark Webber </strong>reacted to your recent post 
+            <span class="post">My first tournament today!</span>
           </p>
+          <span class="notification-time">1m ago</span>
+        </div>
       </div>
-      <div>
-        <img src="assets/images/avatar-jacob-thompson.webp" alt="jacobthompson's avatar">
-        <p><strong class="user-name">Jacob Thompson</strong> has joined your group 
-          <span>Chess Club</span><span class="notification-time">1 day ago</span>
+      <div class="notification-item unread">
+        <img src="assets/images/avatar-angela-gray.webp" alt="angela gray's avatar" class="avatar">
+        <div class="notification-details">
+          <p class="notification-preview">
+            <strong class="user-name">Angela Gray</strong> followed you
+          </p>
+          <span class="notification-time">5m ago</span>
+        </div>
+      </div>
+      <div class="notification-item unread">
+        <img src="assets/images/avatar-jacob-thompson.webp" alt="jacobthompson's avatar" class="avatar">
+        <div class="notification-details">
+          <p class="notification-preview"><strong class="user-name">Jacob Thompson</strong> has joined your group 
+            <span class="club">Chess Club</span>
+          </p>
+          <span class="notification-time">1 day ago</span>
+        </div>
+      </div>
+      <div class="notification-item opened">
+        <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="rizky hasanuddin's avatar" class="avatar">
+        <div class="notification-details">
+          <p class="notification-preview"><strong class="user-name">Rizky Hasanuddin </strong>sent you a private message
+          </p>
+        </div>
+        <span class="notification-time">5 days ago</span>
+        <p class="opened-message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
         </p>
       </div>
-      <div>
-        <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="rizky hasanuddin's avatar">
-        <p><strong class="user-name">Rizky Hasanuddin </strong>sent you a private message<span class="notification-time">5 days ago</span><p class=""opened-message>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.</p></p>
+      <div class="notification-item">
+        <img src="assets/images/avatar-kimberly-smith.webp" alt="kimberly smith's avatar" class="avatar">
+        <div class="notification-details">
+          <div class="notification-preview chess">
+            <p class="chess-first-item">
+              <strong class="user-name">Kimberly Smith</strong> commented on your picture
+            </p>
+            <img src="assets/images//image-chess.webp" alt="image of chess game" class="chess-image">
+          </div>
+          <span class="notification-time">1 week ago</span>
+        </div>
       </div>
-      <div>
-        <img src="assets/images/avatar-kimberly-smith.webp" alt="kimberly smith's avatar">
-        <p><strong class="user-name">Kimberly Smith </strong>commented on your picture<span class="notification-time">1 week ago</span></p>
-        <img src="assets/images//image-chess.webp" alt="image of chess game">
-      </div>
-      <div>
-        <img src="assets/images/avatar-mark-webber.webp" alt="mark weber's avatar">
-        <p>
-          <strong class="user-name">Nathan Peterson</strong>reacted to your recent post 
-          <span>5 end-game strategies to increase your win rate</span>
+      <div class="notification-item">
+        <img src="assets/images/avatar-nathan-peterson.webp" alt="mark weber's avatar" class="avatar">
+        <div class="notification-details">
+          <p class="notification-preview">
+            <strong class="user-name">Nathan Peterson</strong> reacted to your recent post 
+            <span class="post">5 end-game strategies to increase your win rate</span>
+          </p>
           <span class="notification-time">2 weeks ago</span>
-        </p>
+        </div>
       </div>
-      <div>
-        <img src="assets/images/avatar-mark-webber.webp" alt="mark weber's avatar">
-        <p>
-          <strong class="user-name">Anna Kim  </strong>left the group 
-          <span>Chess Club</span>
+      <div class="notification-item">
+        <img src="assets/images/avatar-anna-kim.webp" alt="mark weber's avatar" class="avatar">
+        <div class="notification-details">
+          <p class="notification-preview">
+            <strong class="user-name">Anna Kim</strong> left the group 
+            <span class="club">Chess Club</span>
+          </p>
           <span class="notification-time">2 weeks ago</span>
-        </p>
+        </div>
       </div>
     </main>
   </div>

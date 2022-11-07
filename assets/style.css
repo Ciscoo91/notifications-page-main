@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('fonts/PlusJakartaSans-VariableFont_wght.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('fonts/static/PlusJakartaSans-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('fonts/static/PlusJakartaSans-ExtraBold.ttf');
+    font-weight: 800;
+}
+
+
+:root {
+    --primaryBlue: rgb(11,53,119);
+    --dark: rgb(26, 29, 36);
+    --lightGray: rgb(145,148,153);
+    --gray: rgb(100, 102, 105);
+    --danger: rgb(253,81,78);
+    --lightBlue: rgb(247,250,253);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans';
+}
+
+
+@media screen and (max-width: 844px){
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        margin-bottom: .5rem;
+        font-family: 'Plus Jakarta Sans';
+    }
+
+    .notification-title{
+        font-weight: bold;
+    }
+
+    .notification-badge {
+        padding: .2rem .6rem;
+        margin-left: .3rem;
+        background-color: var(--primaryBlue);
+        color: white;
+        border-radius: 7px;
+    }
+
+    .mark-read{
+        color: var(--lightGray);
+        font-weight: 400;
+    }
+
+    .unread {
+        background-color: var(--lightBlue);
+    }
+
+    .notification-item{
+        border-radius: 10px;
+        margin: 10px auto;
+        padding-top:.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .opened{
+        display: grid;
+        grid-template-columns: auto 80%;
+        grid-template-rows:auto auto auto;
+    }
+
+    .opened .avatar {
+        grid-column: 1/2;
+    }
+
+    .opened-message{
+        grid-column: 2 / -1;
+        grid-row: 3 / -1;
+        margin: .3rem 0 .5rem 0;
+        padding: .5rem;
+        border: 1px solid var(--lightBlue);
+        border-radius: 5px;
+    }
+
+    .avatar, .chess-image{
+        height: 3rem;
+    }
+
+    .notification-details{
+        width: 80%;
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+
+    .notification-time{
+        grid-column: 2 / -1;
+        color: var(--lightGray);
+        margin: .3rem 0;
+    }
+
+    .notification-preview{
+        color: var(--gray)
+    }
+
+    .unread .notification-details .notification-preview::after{
+        content: "";
+        display: inline-block;
+        border-radius: 5px;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+        background-color: var(--danger);
+    }
+
+
+    .chess{
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        /* align-items: center; */
+    }
+
+    .user-name {
+        color: var(--dark);
+    }
+
+    .club{
+        color: var(--primaryBlue);
+        font-weight: 500;
+    }
+
+    .club:hover{
+        cursor: pointer;
+    }
+
+    .post{
+        font-weight: 500;
+    }
+}
