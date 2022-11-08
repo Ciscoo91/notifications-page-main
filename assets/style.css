@@ -61,7 +61,7 @@ body {
 }
 
 .notification-badge {
-    padding: .2rem .6rem;
+    padding: .1rem .6rem;
     margin-left: .3rem;
     background-color: var(--primaryBlue);
     color: white;
@@ -72,7 +72,6 @@ body {
     color: var(--lightGray);
     font-weight: 400;
 }
-
 
 .notification-item{
     border-radius: 10px;
@@ -91,6 +90,10 @@ body {
 
 .opened .avatar {
     grid-column: 1/2;
+}
+
+.opened .notification-time {
+    margin-top: -20px;
 }
 
 .opened-message{
@@ -157,12 +160,23 @@ body {
     font-weight: 500;
 }
 
-.club:hover{
-    cursor: pointer;
-}
 
 .post{
     font-weight: 500;
+}
+
+.user-name:hover, .mark-read:hover, .club:hover, .post:hover{
+    color: var(--primaryBlue);
+    cursor: pointer;
+}
+
+.chess-image:hover{
+    cursor: pointer;
+}
+
+.opened-message:hover{
+    background-color: var(--lightBlue);
+    cursor:pointer;
 }
 
 @media screen and (max-width: 1180){
@@ -173,6 +187,12 @@ body {
     .notification-details{
         width: 90%;
     }
+
+    .opened .notification-time {
+        margin-top: 0;
+    }
+
+
 }
 
 @media screen and (max-width: 844px){
@@ -189,7 +209,10 @@ body {
 
    .notification-details{
         width: 90%;
-        /* padding-left: .5rem; */
+    }
+
+    .opened .notification-time {
+        margin-top: 0;
     }
 }
 
