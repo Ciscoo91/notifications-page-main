@@ -179,19 +179,24 @@ body {
     cursor:pointer;
 }
 
-@media screen and (max-width: 1180){
+@media screen and (max-width: 1180px){
     .container {
         margin:2rem auto 0 auto;
     }
 
     .notification-details{
-        width: 90%;
+        width: 95%;
+    }
+
+    .opened {
+        display: grid;
+        grid-template-columns: 48px auto;
+        grid-column-gap: 15px;
     }
 
     .opened .notification-time {
         margin-top: 0;
     }
-
 
 }
 
@@ -201,10 +206,6 @@ body {
         width: 90%;
         margin: 0 auto;
         border-radius: 0;
-    }
-
-    .opened {
-        grid-template-columns: auto 80%;
     }
 
    .notification-details{
