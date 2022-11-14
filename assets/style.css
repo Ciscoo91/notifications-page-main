@@ -17,13 +17,13 @@
 
 
 :root {
-    --primaryBlue: rgb(11,53,119);
-    --dark: rgb(26, 29, 36);
-    --lightBg: rgb(240, 242, 246);
-    --lightGray: rgb(145,148,153);
-    --gray: rgb(100, 102, 105);
-    --danger: rgb(253,81,78);
-    --lightBlue: rgb(241, 247, 252);
+    --primaryBlue: hsl(219, 85%, 26%);
+    --dark: hsl(224, 21%, 14%);
+    --lightBg: hsl(210, 60%, 98%);
+    --grayishBlue: hsl(219, 14%, 63%);
+    --lightGray: hsl(211, 68%, 94%);
+    --gray: hsl(219, 12%, 42%);
+    --danger: hsl(1, 90%, 64%);
 }
 
 * {
@@ -69,14 +69,14 @@ body {
 }
 
 .mark-read{
-    color: var(--lightGray);
+    color: var(--gray);
     font-weight: 400;
 }
 
 .notification-item{
     border-radius: 10px;
     margin: 10px auto;
-    padding:.5rem 0;
+    padding:.5rem 0 .5rem .5rem;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -101,12 +101,12 @@ body {
     grid-row: 3 / -1;
     margin: .3rem 0 .5rem 0;
     padding: .5rem;
-    border: 1px solid var(--lightBlue);
+    border: 1px solid var(--lightGray);
     border-radius: 5px;
 }
 
  .unread {
-    background-color: var(--lightBlue);
+    background-color: var(--lightGray);
 }
 
 .avatar, .chess-image{
@@ -121,7 +121,7 @@ body {
 
 .notification-time{
     grid-column: 2 / -1;
-    color: var(--lightGray);
+    color: var(--gray);
     margin: .3rem 0;
 }
 
@@ -175,7 +175,7 @@ body {
 }
 
 .opened-message:hover{
-    background-color: var(--lightBlue);
+    background-color: var(--lightGray);
     cursor:pointer;
 }
 
